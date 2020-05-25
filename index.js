@@ -30,7 +30,7 @@ let monthlyInterestRate = (interestRate / 12)
 let periods = (years * 12)
 
 
-console.log(monthlyInterestRates);
+console.log(monthlyInterestRate);
 console.log(periods);
 
 
@@ -51,7 +51,7 @@ let numerator = interestRate * (Math.pow ((1 + interestRate), periods))
 
 console.log(numerator);
 
-let denominator = Math.pow((1 + interestRate), periods);
+let denominator = Math.pow((1 + interestRate), periods) - 1;
 
 console.log(denominator);
 
@@ -134,3 +134,102 @@ that a person could afford */
 
 /* 🏡  Refactor your `variableInterestRate()` function to accept an array of interest rates 
 (make sure to copy and paste as to not lose your work!) */
+
+
+
+
+
+
+
+//**This is what I get when I use the variables I set for each value**
+
+let principle = '200000'
+let interestRate = '0.05'
+let years = '30'
+const name = 'Alix Catalanotto'
+
+
+console.log(principle);
+console.log(interestRate);
+console.log(years);
+console.log(name);
+
+let monthlyInterestRate = 0.05 / 12
+
+let periods = 30 * 12
+
+console.log(monthlyInterestRate);
+console.log(periods);
+
+let numerator = interestRate * (Math.pow ((1 + interestRate), periods))
+
+console.log(numerator);
+
+let denominator = Math.pow((1 + interestRate), periods) - 1;
+
+console.log(denominator);
+
+let monthlyRate = principle * (numerator / denominator);
+
+console.log(monthlyRate);
+
+
+//answers: 
+200000
+0.05
+30
+Alix Catalanotto
+0.004166666666666667
+360
+Infinity
+Infinity
+NaN
+
+//**This is what I get when I use the number values I set for each variable**
+
+let principle = '200000'
+let interestRate = '0.05'
+let years = '30'
+const name = 'Alix Catalanotto'
+
+
+console.log(principle);
+console.log(interestRate);
+console.log(years);
+console.log(name);
+
+let monthlyInterestRate = 0.05 / 12
+
+let periods = 30 * 12
+
+console.log(monthlyInterestRate);
+console.log(periods);
+
+let numerator = interestRate * (Math.pow ((1 + 0.05), 360))
+
+console.log(numerator);
+
+let denominator = Math.pow((1 + 0.05), 360) - 1;
+
+console.log(denominator);
+
+let monthlyRate = principle * (numerator / denominator);
+
+console.log(monthlyRate);
+
+
+//answers:
+200000
+0.05
+30
+Alix Catalanotto
+0.004166666666666667
+360
+2123819.8204340334
+42476395.40868067
+10000.000235424874
+
+
+
+
+

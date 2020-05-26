@@ -99,14 +99,14 @@ function mortgageCalculator (creditScore, principle, interestRate, periods){
 }
 
 if (creditScore > 740){
-    console.log(interestRate - 0.05)
+    console.log(interestRate - 0.005)
 }
 
 else if (creditScore < 660){
-    console.log(interestRate + 0.05);
+    console.log(interestRate + 0.005);
 }
 
-else {
+else (creditScore > 740 || creditScore <=660); {
     console.log(interestRate);
 }
 
@@ -130,11 +130,16 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 "{Name}, with an interest rate of 0.055, your monthly rate is $1136"
 "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
 */
+var yourRate = 0
 
-function variableInterestRate(principle, monthlyInterestRates, periods) {
-    console.log(principle*(numerator / denominator))
+function variableInterestRate(repeat){
+    for (let i = +-.02; i < repeat, i+.005;){
+        console.log(name,", with an interest rate of", interestRate,", your monthly rate is $", monthlyRate);
+    }
+    return (yourRate/repeat)
 }
-variableInterestRate(200000, 0.05, 30);
+variableInterestRate(10);
+
 
 
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//

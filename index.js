@@ -94,23 +94,24 @@ Then, add control flow within your function such that IF creditScore is above 74
 if credit score is below 660, interest rate increases by 0.5% and if credit score is anywhere between 660 and 740 
 interest rate doesn't change.
 */
-function mortgageCalculator (creditScore, principle, interestRate, periods){
-    console.log(creditScore, principle *(numerator/denominator));
+
+let creditScore = 680
+
+function mortgageCalculator(principle, monthlyInterestRates, periods) {
+    console.log(principle*(numerator / denominator))
 }
+mortgageCalculator(200000, 0.05, 30);{
 
 if (creditScore > 740){
-    console.log(interestRate - 0.005)
+   interestRate = interestRate - 0.005
 }
 
 else if (creditScore < 660){
-    console.log(interestRate + 0.005);
+    interestRate = interestRate - 0.005;
+}
 }
 
-else (creditScore > 740 || creditScore <=660); {
-    console.log(interestRate);
-}
-
-mortgageCalculator(690, 200000, 0.05, 30);
+mortgageCalculator(creditScore, principle, interestRate, periods)
 
 
 // 🏡 Task 6: Loops

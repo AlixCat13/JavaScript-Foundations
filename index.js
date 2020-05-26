@@ -5,9 +5,9 @@
 Create another value called name and give it the value of your own name.
 */
 
-let principle = '200000'
-let interestRate = '0.05'
-let years = '30'
+let principle = 200000
+let interestRate = 0.05
+let years = 30
 const name = 'Alix Catalanotto'
 
 
@@ -26,8 +26,8 @@ Create a variable called `monthlyInterestRate` and give it the value of interest
 
 Create another variable called `periods` and give it the value of years*12.
 */
-let monthlyInterestRate = (interestRate / 12)
-let periods = (years * 12)
+let monthlyInterestRate = (interestRate/12)
+let periods = (years*12)
 
 
 console.log(monthlyInterestRate);
@@ -47,15 +47,15 @@ Hint #2: you'll need to use the `math` object for parts of this calculation!
 When your math is correct, monthlyRate will equal 1073.64
 */
 
-let numerator = interestRate * (Math.pow ((1 + interestRate), periods))
+let numerator = monthlyInterestRate*(Math.pow(1+monthlyInterestRate, periods));
 
 console.log(numerator);
 
-let denominator = Math.pow((1 + interestRate), periods) - 1;
+let denominator = (Math.pow(1+monthlyInterestRate, periods)-1);
 
 console.log(denominator);
 
-let monthlyRate = principle * (numerator / denominator);
+let monthlyRate = principle*(numerator/denominator);
 
 console.log(monthlyRate);
 
@@ -66,9 +66,11 @@ sentence "{Name}, your monthly rate is ${monthlyRate}"
 
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
+function mortgageCalculator (){
+    console.log(name + ", your monthly rate is $" + monthlyRate);
+}
 
-
-
+mortgageCalculator();
 
 
 // 🏡 Task 4: Arguments and Parameters
@@ -135,99 +137,6 @@ that a person could afford */
 /* 🏡  Refactor your `variableInterestRate()` function to accept an array of interest rates 
 (make sure to copy and paste as to not lose your work!) */
 
-
-
-
-
-
-
-//**This is what I get when I use the variables I set for each value**
-
-let principle = '200000'
-let interestRate = '0.05'
-let years = '30'
-const name = 'Alix Catalanotto'
-
-
-console.log(principle);
-console.log(interestRate);
-console.log(years);
-console.log(name);
-
-let monthlyInterestRate = 0.05 / 12
-
-let periods = 30 * 12
-
-console.log(monthlyInterestRate);
-console.log(periods);
-
-let numerator = interestRate * (Math.pow ((1 + interestRate), periods))
-
-console.log(numerator);
-
-let denominator = Math.pow((1 + interestRate), periods) - 1;
-
-console.log(denominator);
-
-let monthlyRate = principle * (numerator / denominator);
-
-console.log(monthlyRate);
-
-
-//answers: 
-200000
-0.05
-30
-Alix Catalanotto
-0.004166666666666667
-360
-Infinity
-Infinity
-NaN
-
-//**This is what I get when I use the number values I set for each variable**
-
-let principle = '200000'
-let interestRate = '0.05'
-let years = '30'
-const name = 'Alix Catalanotto'
-
-
-console.log(principle);
-console.log(interestRate);
-console.log(years);
-console.log(name);
-
-let monthlyInterestRate = 0.05 / 12
-
-let periods = 30 * 12
-
-console.log(monthlyInterestRate);
-console.log(periods);
-
-let numerator = interestRate * (Math.pow ((1 + 0.05), 360))
-
-console.log(numerator);
-
-let denominator = Math.pow((1 + 0.05), 360) - 1;
-
-console.log(denominator);
-
-let monthlyRate = principle * (numerator / denominator);
-
-console.log(monthlyRate);
-
-
-//answers:
-200000
-0.05
-30
-Alix Catalanotto
-0.004166666666666667
-360
-2123819.8204340334
-42476395.40868067
-10000.000235424874
 
 
 

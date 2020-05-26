@@ -81,9 +81,10 @@ For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
-
-
-
+function mortgageCalculator(principle, monthlyInterestRates, periods) {
+    console.log(principle*(numerator / denominator))
+}
+mortgageCalculator(200000, 0.05, 30);
 
 // 🏡 Task 5: Conditionals
 /* Add another paramter to your function called credit score. This parameter will be a number between 0 and 800 
@@ -93,8 +94,23 @@ Then, add control flow within your function such that IF creditScore is above 74
 if credit score is below 660, interest rate increases by 0.5% and if credit score is anywhere between 660 and 740 
 interest rate doesn't change.
 */
+function mortgageCalculator (creditScore, principle, interestRate, periods){
+    console.log(creditScore, principle *(numerator/denominator));
+}
 
+if (creditScore > 740){
+    console.log(interestRate - 0.05)
+}
 
+else if (creditScore < 660){
+    console.log(interestRate + 0.05);
+}
+
+else {
+    console.log(interestRate);
+}
+
+mortgageCalculator(690, 200000, 0.05, 30);
 
 
 // 🏡 Task 6: Loops
@@ -115,7 +131,10 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
 */
 
-
+function variableInterestRate(principle, monthlyInterestRates, periods) {
+    console.log(principle*(numerator / denominator))
+}
+variableInterestRate(200000, 0.05, 30);
 
 
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//

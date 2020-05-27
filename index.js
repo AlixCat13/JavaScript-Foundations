@@ -57,7 +57,7 @@ console.log(denominator);
 
 let monthlyRate = principle*(numerator/denominator);
 
-console.log(monthlyRate);
+console.log(monthlyRate, 'this is the monthly rate');
 
 
 // 🏡 Task 3: Function
@@ -66,11 +66,11 @@ sentence "{Name}, your monthly rate is ${monthlyRate}"
 
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
-function mortgageCalculator (){
-    console.log(name + ", your monthly rate is $" + monthlyRate);
+function mortgageCalculator() {
+    return(name, ", your monthly rate is $" , monthlyRate);
 }
 
-mortgageCalculator();
+console.log(mortgageCalculator(),'this is the answer for task 3');
 
 
 // 🏡 Task 4: Arguments and Parameters
@@ -81,7 +81,7 @@ For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
-function mortgageCalculator(principle, monthlyInterestRates, periods) {
+function mortgageCalculator(P, I, N) {
     console.log(principle*(numerator / denominator))
 }
 mortgageCalculator(200000, 0.05, 30);
@@ -95,23 +95,24 @@ if credit score is below 660, interest rate increases by 0.5% and if credit scor
 interest rate doesn't change.
 */
 
-let creditScore = 680
 
-function mortgageCalculator(principle, monthlyInterestRates, periods) {
+function mortgageCalculator(creditScore, principle, monthlyInterestRates, periods) {
     console.log(principle*(numerator / denominator))
-}
-mortgageCalculator(200000, 0.05, 30);{
 
-if (creditScore > 740){
-   interestRate = interestRate - 0.005
-}
-
-else if (creditScore < 660){
-    interestRate = interestRate - 0.005;
-}
+    if (creditScore > 740){
+   interestRate = interestRate - 0.005;
+   console.log(interestRate);
 }
 
-mortgageCalculator(creditScore, principle, interestRate, periods)
+  else if (creditScore < 660){
+    interestRate = interestRate + 0.005;
+    console.log(interestRate);
+}
+   return(interestRate);
+}
+
+console.log(mortgageCalculator(680, 200000, 0.05, 30),"interest rate");
+
 
 
 // 🏡 Task 6: Loops
@@ -131,15 +132,15 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 "{Name}, with an interest rate of 0.055, your monthly rate is $1136"
 "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
 */
-var yourRate = 0
+//var yourRate = 0
 
-function variableInterestRate(repeat){
-    for (let i = +-.02; i < repeat, i+.005;){
-        console.log(name,", with an interest rate of", interestRate,", your monthly rate is $", monthlyRate);
-    }
-    return (yourRate/repeat)
-}
-variableInterestRate(10);
+// function variableInterestRate(repeat){
+//     for (let i = +-.02; i < repeat, i+.005;){
+//         console.log(name,", with an interest rate of", interestRate,", your monthly rate is $", monthlyRate);
+//     }
+//     return (yourRate/repeat)
+// }
+// variableInterestRate(10);
 
 
 

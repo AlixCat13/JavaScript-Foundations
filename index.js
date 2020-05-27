@@ -67,10 +67,10 @@ sentence "{Name}, your monthly rate is ${monthlyRate}"
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 function mortgageCalculator() {
-    return(name, ", your monthly rate is $" , monthlyRate);
+    return(name,", your monthly rate is $" , monthlyRate);
 }
 
-console.log(mortgageCalculator());
+console.log(name, ", your monthly rate is $", monthlyRate.toFixed(2));
 
 
 // 🏡 Task 4: Arguments and Parameters
@@ -81,10 +81,10 @@ For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
-function mortgageCalculator(principle, interestRate, periods) {
-    console.log(principle*(numerator / denominator))
+function mortgageCalculator(principle, numerator, denominator) {
+    console.log(principle*(numerator / denominator), "this is the first console in task 4");
 }
-mortgageCalculator(200000, 0.05, 30);
+console.log(mortgageCalculator(200000, 0.05, 30), "this is task 4");
 
 // 🏡 Task 5: Conditionals
 /* Add another paramter to your function called credit score. This parameter will be a number between 0 and 800 
@@ -101,17 +101,17 @@ function mortgageCalculator(creditScore, principle, monthlyInterestRates, period
 
     if (creditScore > 740){
    interestRate = interestRate - 0.005;
-   console.log(interestRate);
+   console.log(interestRate.toFixed(2) - 0.005, "this is the if in  task 5");
 }
 
   else if (creditScore < 660){
     interestRate = interestRate + 0.005;
-    console.log(interestRate);
+    console.log(interestRate + 0.005, "this is the else statement in task 5");
 }
    return(interestRate);
 }
 
-console.log(mortgageCalculator(680, 200000, 0.05, 30),"interest rate");
+console.log(mortgageCalculator(500, 200000, 0.05, 30).toFixed(2),"interest rate");
 
 
 

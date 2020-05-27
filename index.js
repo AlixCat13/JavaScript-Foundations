@@ -53,11 +53,11 @@ console.log(numerator);
 
 let denominator = (Math.pow(1+monthlyInterestRate, periods)-1);
 
-console.log(denominator.toFixed(2));
+console.log(denominator);
 
 let monthlyRate = principle*(numerator/denominator);
 
-console.log(monthlyRate.toFixed(2), 'this is the monthly rate');
+console.log(monthlyRate.toFixed(2));
 
 
 // 🏡 Task 3: Function
@@ -81,10 +81,11 @@ For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
-function mortgageCalculator(principle, numerator, denominator) {
-    console.log(principle*(numerator / denominator), "this is the first console in task 4");
+function mortgageCalculator(principle, interestRate, periods) {
+    return(monthlyRate.toFixed(2));
 }
-console.log(mortgageCalculator(200000, 0.05, 30), "this is task 4");
+mortgageCalculator(200000, 0.05, 30);
+console.log(monthlyRate.toFixed(2));
 
 // 🏡 Task 5: Conditionals
 /* Add another paramter to your function called credit score. This parameter will be a number between 0 and 800 
@@ -96,22 +97,23 @@ interest rate doesn't change.
 */
 
 
-function mortgageCalculator(creditScore, principle, monthlyInterestRates, periods) {
-    console.log(principle*(numerator / denominator))
+function mortgageCalculator(creditScore) {
+    //console.log(principle*(numerator / denominator));
 
     if (creditScore > 740){
-   interestRate = interestRate - 0.005;
-   console.log(interestRate.toFixed(2) - 0.005, "this is the if in  task 5");
+   //interestRate = interestRate - 0.005;
+   return(interestRate - 0.005);
 }
 
   else if (creditScore < 660){
-    interestRate = interestRate + 0.005;
-    console.log(interestRate + 0.005, "this is the else statement in task 5");
+    //interestRate = interestRate + 0.005;
+    return(interestRate + 0.005);
 }
    return(interestRate);
 }
+   //creditScore = 750;
 
-console.log(mortgageCalculator(500, 200000, 0.05, 30).toFixed(2),"interest rate");
+ console.log(mortgageCalculator(600, 200000, 0.05, 30).toFixed(2));
 
 
 
@@ -132,15 +134,27 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 "{Name}, with an interest rate of 0.055, your monthly rate is $1136"
 "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
 */
-//var yourRate = 0
+function variableInterestRate(principle, interestRate, periods){
 
-// function variableInterestRate(repeat){
-//     for (let i = +-.02; i < repeat, i+.005;){
-//         console.log(name,", with an interest rate of", interestRate,", your monthly rate is $", monthlyRate);
-//     }
-//     return (yourRate/repeat)
-// }
-// variableInterestRate(10);
+    for (let i = 0; i<10; i++) {
+    let monthlyInterestRate = (interestRate/12);
+    let periods = (years * 12);
+
+    let numerator = monthlyInterestRate*(Math.pow(1+monthlyInterestRate, periods));
+
+    let denominator = (Math.pow(1+monthlyInterestRate, periods)-1);
+
+    let monthlyRate =
+    (principle*numerator/denominator).toFixed(2);
+
+    let message = (name) + (", with an interest rate of ") + (interestRate.toFixed(3)) + (", your monthly rate is $") + Math.round((monthlyRate));
+
+    console.log(message);
+    interestRate= (interestRate+(0.5/100))
+  }
+}
+
+variableInterestRate(200000, 0.02, 30);
 
 
 
@@ -163,6 +177,29 @@ that a person could afford */
 /* 🏡  Refactor your `variableInterestRate()` function to accept an array of interest rates 
 (make sure to copy and paste as to not lose your work!) */
 
+function variableInterestRate(principle, interestRate, periods){
+
+    let interestRates = [0.03, 0.04, 0.05, 0.06];
+
+    for (let i = 0; i<10; i++) {
+    let monthlyInterestRate = (interestRate/12);
+    let periods = (years * 12);
+
+    let numerator = monthlyInterestRate*(Math.pow(1+monthlyInterestRate, periods));
+
+    let denominator = (Math.pow(1+monthlyInterestRate, periods)-1);
+
+    let monthlyRate =
+    (principle*numerator/denominator).toFixed(2);
+
+    let message = (name) + (", with an interest rate of ") + (interestRate.toFixed(3)) + (", your monthly rate is $") + Math.round((monthlyRate));
+
+    console.log(message);
+    interestRate= (interestRate+(0.5/100))
+  }
+}
+
+variableInterestRate(200000, 0.02, 30);
 
 
 

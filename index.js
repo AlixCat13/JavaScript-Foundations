@@ -53,11 +53,11 @@ console.log(numerator);
 
 let denominator = (Math.pow(1+monthlyInterestRate, periods)-1);
 
-console.log(denominator);
+console.log(denominator.toFixed(2));
 
 let monthlyRate = principle*(numerator/denominator);
 
-console.log(monthlyRate, 'this is the monthly rate');
+console.log(monthlyRate.toFixed(2), 'this is the monthly rate');
 
 
 // 🏡 Task 3: Function
@@ -70,7 +70,7 @@ function mortgageCalculator() {
     return(name, ", your monthly rate is $" , monthlyRate);
 }
 
-console.log(mortgageCalculator(),'this is the answer for task 3');
+console.log(mortgageCalculator());
 
 
 // 🏡 Task 4: Arguments and Parameters
@@ -81,7 +81,7 @@ For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
-function mortgageCalculator(P, I, N) {
+function mortgageCalculator(principle, interestRate, periods) {
     console.log(principle*(numerator / denominator))
 }
 mortgageCalculator(200000, 0.05, 30);

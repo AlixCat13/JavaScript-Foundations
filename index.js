@@ -81,11 +81,12 @@ For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
-function mortgageCalculator(principle, interestRate, periods) {
-    return(monthlyRate.toFixed(2));
-}
-mortgageCalculator(200000, 0.05, 30);
-console.log(monthlyRate.toFixed(2));
+ function mortgageCalculator(principle, interestRate, periods) {
+     return(monthlyRate.toFixed(2));
+ }
+ mortgageCalculator(200000, 0.05, 30);
+ console.log(monthlyRate.toFixed(2));
+
 
 // 🏡 Task 5: Conditionals
 /* Add another paramter to your function called credit score. This parameter will be a number between 0 and 800 

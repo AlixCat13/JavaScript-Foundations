@@ -67,6 +67,12 @@ sentence "{Name}, your monthly rate is ${monthlyRate}"
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 function mortgageCalculator() {
+  let numerator = monthlyInterestRate*(Math.pow(1+monthlyInterestRate, periods))
+
+  let denominator = (Math.pow(1+monthlyInterestRate, periods)-1);
+
+  let monthlyRate = principle*(numerator/denominator);
+
     return(name,", your monthly rate is $" , monthlyRate);
 }
 
@@ -82,11 +88,12 @@ mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
  function mortgageCalculator(principle, interestRate, periods) {
-     return(monthlyRate.toFixed(2));
+   
+   return(monthlyRate.toFixed(2));
  }
- mortgageCalculator(200000, 0.05, 30);
- console.log(monthlyRate.toFixed(2));
 
+ console.log(monthlyRate.toFixed(2));
+mortgageCalculator(200000, 0.05, 30);
 
 // 🏡 Task 5: Conditionals
 /* Add another paramter to your function called credit score. This parameter will be a number between 0 and 800 
@@ -98,24 +105,21 @@ interest rate doesn't change.
 */
 
 
-function mortgageCalculator(creditScore) {
-    //console.log(principle*(numerator / denominator));
-
-    if (creditScore > 740){
-   //interestRate = interestRate - 0.005;
-   return(interestRate - 0.005);
+function mortgageCalculator(creditScore, principle, interestRate, periods) {
+  
+  if (creditScore > 740){
+    return(interestRate - 0.005);
 }
 
-  else if (creditScore < 660){
-    //interestRate = interestRate + 0.005;
-    return(interestRate + 0.005);
+else if (creditScore < 660){
+  return(interestRate + 0.005);
 }
+else {
    return(interestRate);
 }
-   //creditScore = 750;
 
- console.log(mortgageCalculator(600, 200000, 0.05, 30).toFixed(2));
-
+}
+    console.log(mortgageCalculator(800, 200000, 0.05, 30).toFixed(2));
 
 
 // 🏡 Task 6: Loops
@@ -204,5 +208,4 @@ variableInterestRate(200000, 0.02, 30);
 
 
 
-
-
+ 
